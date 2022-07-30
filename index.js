@@ -1,11 +1,20 @@
 const FormElement = document.querySelector(".my-form");
 const inputElement = document.querySelector(".task");
 const ulElement = document.querySelector(".list");
+const dateElement = document.querySelector(".date");
 let list = JSON.parse( localStorage.getItem('list'))
 
 list.forEach(task=>{
   toDoList(task)
 });
+
+function date(){
+  let currentDate = new Date();
+  let local = currentDate.toLocaleString();
+  dateElement.innerText = local;
+  setInterval(date, 1000)
+}
+date();
 
 FormElement.addEventListener("submit", (e) => {
   e.preventDefault();

@@ -13,10 +13,11 @@
 body{
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: aqua;
+  background-color: hsl(225, 100%, 94%);
   padding: 1.5em;
 }
 
@@ -24,14 +25,13 @@ body{
   width: 100%;
   max-width: 20em;
   box-shadow: 0 0.1em 0.5em rgba(0,0,0,0.3);
-  background-color:rgb(225, 255, 127);
+  background-color: hsl(300, 43%, 22%);
   border-radius: 0.6em;
 }
 
 .task{
   width: 100%;
   padding: 0.5em;
-  border-radius: 0.5em 0.5em 0 0;
   border: none;
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -48,16 +48,16 @@ body{
 }
 
 .list li{
+  color: hsl(225, 100%, 94%);
   padding:  0.5em 1em;
   font-family: Arial, Helvetica, sans-serif;
-  border-top: dotted;
-  border-color: grey;
-  font-weight: bold;
+  border-top: 1px solid;
+  border-color: #fff;
   position: relative;
 }
 
 .list li .fa-check-square{
-  color: green;
+  color: hsl(225, 100%, 94%);
   cursor: pointer;
   position: absolute;
   right: 2.2em;
@@ -66,7 +66,7 @@ body{
 }
 
 .list li .fa-trash{
-  color: red;
+  color: hsl(333, 80%, 67%);
   cursor: pointer;
   position: absolute;
   right: 1em;
@@ -82,4 +82,15 @@ body{
 
 .list li.checked .fa-check-square{
   color: gray;
+}
+
+.date{
+  color: #fff;
+  padding: 0.5em 0;
+  width: 100%;
+  max-width: 20em;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 0.5em 0.5em 0 0;
 }
